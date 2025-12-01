@@ -18,13 +18,25 @@ namespace WinFormsApp6
 
         private List<Employee> employees = new List<Employee>();
 
-        public Form1()
+        private string loginUserId;
+
+        public Form1(string userId)
+        {
+            InitializeComponent();
+            loginUserId = userId;
+        }
+
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // 만약 lblUser 같은 라벨 있으면
+            // lblUser.Text = $"로그인: {loginUserId}";
+
+            // 기존 코드 그대로 유지
+
             // 직원 예시 데이터
             employees.Add(new Employee { ID = "E001", Name = "홍길동", Department = "인사", IsVisibleToUser = true });
             employees.Add(new Employee { ID = "E002", Name = "김철수", Department = "개발", IsVisibleToUser = true });
