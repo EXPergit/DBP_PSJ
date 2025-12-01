@@ -269,9 +269,9 @@ namespace WindowsFormsApp5
             SaveLoginSettings(userId, userPw);
 
             // 4. 이후 동작 (메인폼 등)
-            // MainForm main = new MainForm();
-            // main.Show();
-            // this.Hide();
+            Form1 main = new Form1(userId);  // 로그인한 ID 전달
+            main.Show();
+            this.Hide();
         }
 
         /// <summary>
